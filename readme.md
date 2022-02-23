@@ -1,7 +1,7 @@
 <div align="center">
   <p>
-    <img alt="Logo (Light)" src="src/logo.svg#gh-light-mode-only" width="200">
-    <img alt="Logo (Dark)" src="src/logo-dark.svg#gh-dark-mode-only" width="200">
+    <img alt="Logo (Light)" src="assets/logo.svg#gh-light-mode-only" width="200">
+    <img alt="Logo (Dark)" src="assets/logo-dark.svg#gh-dark-mode-only" width="200">
   </p>
   <p>
     <b>Spear AI Logo</b>
