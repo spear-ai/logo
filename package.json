@@ -1,29 +1,26 @@
 {
   "name": "@spear-ai/logo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Spear AI Logo",
   "license": "MIT",
-  "files": ["src", "dist"],
+  "files": ["assets", "react"],
   "exports": {
-    "./react": "./dist/react.esm.js"
+    "./react": "./react/index.js"
   },
-  "main": "dist/index.js",
   "repository": "github:spear-ai/logo",
   "type": "module",
   "typesVersions": {
     "*": {
-      "react": ["dist/react.d.ts"]
+      "*": ["*"]
     }
   },
   "scripts": {
     "build": "yarn run clean && yarn run build:code && yarn run build:types",
-    "build:code": "yarn run build:code:cjs && yarn run build:code:esm",
-    "build:code:cjs": "esbuild --format=cjs --outfile=dist/index.js --platform=node --target=node14 src/index.ts",
-    "build:code:esm": "esbuild --outfile=dist/react.esm.js --platform=node --target=node14 src/react.tsx",
+    "build:code": "esbuild --outfile=react/index.js --platform=node --target=node14 src/react/index.tsx",
     "build:types": "tsc --emitDeclarationOnly --declaration --project tsconfig.build.json",
     "check": "yarn run lint && yarn run typecheck",
     "ci": "act --container-architecture=linux/amd64 --platform=ubuntu-latest=ghcr.io/catthehacker/ubuntu:js-latest",
-    "clean": "del dist",
+    "clean": "del react",
     "esbuild": "esbuild",
     "lint": "yarn run lint:js && yarn run lint:package",
     "lint:js": "eslint --ext .js,.ts,.tsx --ignore-path .gitignore .",
@@ -33,12 +30,14 @@
     "update": "yarn run update:js && yarn run update:yarn",
     "update:js": "yarn upgrade-interactive --latest",
     "update:yarn": "yarn policies set-version",
-    "watch": "yarn run build:code:esm --watch"
+    "watch": "concurrently 'yarn:watch:code' 'yarn:watch:types'",
+    "watch:code": "yarn run build:code --watch",
+    "watch:types": "yarn run build:types --watch"
   },
   "devDependencies": {
     "@commitlint/cli": "16.2.1",
     "@commitlint/config-conventional": "16.2.1",
-    "@types/node": "17.0.20",
+    "@types/node": "17.0.21",
     "@types/react": "17.0.39",
     "@typescript-eslint/eslint-plugin": "5.12.1",
     "@typescript-eslint/parser": "5.12.1",

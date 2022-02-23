@@ -2,10 +2,5 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "incremental": false
-  },
-  "include": [
-    "src/**.ts",
-    "src/**.tsx",
-    "types"
-  ],
+  }
 }

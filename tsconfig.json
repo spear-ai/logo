@@ -12,7 +12,7 @@
     "lib": ["ESNext"],
     "module": "ESNext",
     "moduleResolution": "Node",
-    "outDir": "dist",
+    "outDir": "react",
     "removeComments": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
@@ -20,12 +20,10 @@
     "target": "ESNext"
   },
   "exclude": [
-    "dist",
     "node_modules"
   ],
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
+    "src/react",
     "types"
   ],
   "types": ["types"]
