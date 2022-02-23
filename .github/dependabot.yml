@@ -14,10 +14,3 @@ updates:
       - '🌋 technical debt'
     schedule:
       interval: 'monthly'
-  - package-ecosystem: 'npm'
-    directory: '/packages/react-logo'
-    labels:
-      - '🚀 update'
-      - '🌋 technical debt'
-    schedule:
-      interval: 'weekly'
