@@ -5,6 +5,7 @@
   "license": "MIT",
   "files": ["assets", "react"],
   "exports": {
+    "./assets/*": "./assets/*",
     "./react": "./react/index.js"
   },
   "repository": "github:spear-ai/logo",
