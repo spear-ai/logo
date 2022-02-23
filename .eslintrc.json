@@ -1,0 +1,129 @@
+{
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:array-func/all",
+    "plugin:eslint-comments/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:jest/recommended",
+    "plugin:markdown/recommended",
+    "plugin:optimize-regex/recommended",
+    "plugin:promise/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:typescript-sort-keys/recommended",
+    "plugin:unicorn/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "project": "./tsconfig.json",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "array-func",
+    "eslint-comments",
+    "import",
+    "jest",
+    "markdown",
+    "optimize-regex",
+    "promise",
+    "react-use-props",
+    "sort-destructure-keys",
+    "sonarjs",
+    "typescript-sort-keys",
+    "unicorn"
+  ],
+  "root": true,
+  "rules": {
+    "array-func/prefer-array-from": ["off"],
+    "eslint-comments/disable-enable-pair": ["error", {
+      "allowWholeFile": true
+    }],
+    "eslint-comments/no-unused-disable": ["error"],
+    "function-paren-newline": ["off", "consistent"],
+    "object-curly-newline": ["error", {
+      "ExportDeclaration": {
+        "consistent": true,
+        "minProperties": 6,
+        "multiline": true
+      },
+      "ImportDeclaration": {
+        "consistent": true,
+        "minProperties": 6,
+        "multiline": true
+      },
+      "ObjectExpression": {
+        "consistent": true,
+        "minProperties": 6,
+        "multiline": true
+      },
+      "ObjectPattern": {
+        "consistent": true,
+        "minProperties": 6,
+        "multiline": true
+      }
+    }],
+    "import/no-anonymous-default-export": ["error"],
+    "import/no-default-export": ["error"],
+    "import/prefer-default-export": ["off"],
+    "jsx-a11y/anchor-is-valid": [ "error", {
+      "components": ["Link" ],
+      "specialLink": ["hrefLeft", "hrefRight"],
+      "aspects": ["invalidHref", "preferButton"]
+    }],
+    "jsx-a11y/label-has-associated-control": ["error", {
+      "assert": "either"
+    }],
+    "jsx-a11y/no-autofocus": ["off"],
+    "max-len": ["error", {
+      "code": 90,
+      "ignoreComments": false,
+      "ignorePattern": "^(ex|im)port (.*)",
+      "ignoreRegExpLiterals": true,
+      "ignoreStrings": true,
+      "ignoreTemplateLiterals": true,
+      "ignoreUrls": true,
+      "tabWidth": 2
+    }],
+    "no-continue": ["off"],
+    "no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"],
+    "quote-props": ["error", "consistent-as-needed"],
+    "react/forbid-component-props": ["error", {
+      "forbid": [{
+          "allowedFor": ["FormattedList", "FormattedNumber"],
+          "message": "Use the `className` property instead",
+          "propName": "style"
+        }]
+    }],
+    "react/forbid-dom-props": ["error", {
+      "forbid": [{
+        "message": "Use the `className` property instead",
+        "propName": "style"
+      }]
+    }],
+    "react/function-component-definition": ["error", {
+      "namedComponents": "arrow-function",
+      "unnamedComponents": "arrow-function"
+    }],
+    "react-hooks/exhaustive-deps": ["off"],
+    "react/style-prop-object": ["off"],
+    "react/jsx-sort-props": ["error"],
+    "sort-destructure-keys/sort-destructure-keys": ["error"],
+    "sort-keys": ["error", "asc", {
+      "natural": true
+    }],
+    "sort-imports": ["error", {
+      "ignoreDeclarationSort": true
+    }],
+    "sort-vars": ["error"],
+    "unicorn/no-null": ["off"],
+    "unicorn/prefer-at": ["error"],
+    "unicorn/prefer-object-has-own": ["error"],	
+    "unicorn/prefer-string-replace-all": ["error"],
+    "unicorn/prefer-top-level-await": ["error"],
+    "unicorn/prevent-abbreviations": ["error"],
+    "unicorn/template-indent": ["error"]
+  }
+}

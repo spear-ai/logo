@@ -1,0 +1,23 @@
+version: 2
+updates:
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    labels:
+      - '🚀 update'
+      - '🌋 technical debt'
+    schedule:
+      interval: 'monthly'
+  - package-ecosystem: 'npm'
+    directory: '/'
+    labels:
+      - '🚀 update'
+      - '🌋 technical debt'
+    schedule:
+      interval: 'monthly'
+  - package-ecosystem: 'npm'
+    directory: '/packages/react-logo'
+    labels:
+      - '🚀 update'
+      - '🌋 technical debt'
+    schedule:
+      interval: 'weekly'

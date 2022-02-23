@@ -1,0 +1,20 @@
+{
+  "extends": "npm-package-json-lint-config-default",
+  "rules": {
+    "description-format": ["error", {
+      "forbidEndingPeriod": true
+    }],
+    "no-duplicate-properties": "error",
+    "no-repeated-dependencies": "error",
+    "prefer-absolute-version-devDependencies": ["error", {}],
+    "prefer-alphabetical-bundledDependencies": "error",
+    "prefer-alphabetical-dependencies": "error",
+    "prefer-alphabetical-devDependencies": "error",
+    "prefer-alphabetical-optionalDependencies": "error",
+    "prefer-alphabetical-peerDependencies": "error",
+    "prefer-alphabetical-scripts": "error",
+    "prefer-property-order": ["error", []],
+    "require-description": "error",
+    "version-format": "error"
+  }
+}

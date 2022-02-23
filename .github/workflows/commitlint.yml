@@ -1,0 +1,13 @@
+name: commitlint
+on:
+  pull_request:
+    types: ['edited', 'opened', 'synchronize']
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: yarn install
+      - uses: JulienKode/pull-request-name-linter-action@master
+        with:
+          configuration-path: '.commitlintrc.json'

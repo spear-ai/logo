@@ -1,0 +1,6 @@
+{
+  "changelog-path": "changelog.md",
+  "group-pull-request-title-pattern": "chore: release v${version}",
+  "label": "🤖 auto-release: pending",
+  "release-label": "🤖 auto-release: tagged"
+}
