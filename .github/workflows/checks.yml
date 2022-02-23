@@ -21,12 +21,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - id: nvmrc
-        run: echo "::set-output name=version::$(cat .nvmrc)"
       - uses: actions/setup-node@v2
         with:
           cache: 'yarn'
-          node-version: ${{ steps.nvmrc.outputs.version }}
+          node-version-file: '.nvmrc'
       - run: |
           yarn install
           yarn run check
