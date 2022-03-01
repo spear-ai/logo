@@ -4864,10 +4864,10 @@ regexpp@^3.2.0:
   resolved "https://registry.yarnpkg.com/regexpp/-/regexpp-3.2.0.tgz#0425a2768d8f23bad70ca4b90461fa2f1213e1b2"
   integrity sha512-pq2bWo9mVD43nbts2wGv17XLiNLya+GklZ8kaDLV2Z08gDCsGpnKn9BFMepvWuHCbyVvY7J5o5+BVvoQbmlJLg==
 
-release-please@13.4.12:
-  version "13.4.12"
-  resolved "https://registry.yarnpkg.com/release-please/-/release-please-13.4.12.tgz#338839f4e59d72eeec661b9d6e45c439d5486b80"
-  integrity sha512-9LfUVhG2WP/Y6X6cehdeUA8C52pvgsbCi91mVooVbYlARGfaM1TnrO0ssNNOyO3E4kPZzwDw7uSS+j0LcPistw==
+release-please@13.4.14:
+  version "13.4.14"
+  resolved "https://registry.yarnpkg.com/release-please/-/release-please-13.4.14.tgz#8e42a249a20357c668600d833d7414e8f2dc8f24"
+  integrity sha512-Z0n/nesX30QM+TfZ2Is1QejOAlA4NN/hMrHkPxdkZ4SfMywcV4XxDb/J7Z78lRRyQIeNrL/Lk5PWLryhidt0WA==
   dependencies:
     "@conventional-commits/parser" "^0.4.1"
     "@iarna/toml" "^2.2.5"
