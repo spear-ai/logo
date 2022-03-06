@@ -3,6 +3,11 @@
   "version": "1.0.2",
   "description": "Spear AI Logo",
   "license": "MIT",
+  "author": {
+    "email": "org@spear.ai",
+    "name": "Spear AI",
+    "url": "https://spear.ai"
+  },
   "files": [
     "assets",
     "react"
