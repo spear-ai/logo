@@ -1,20 +1,20 @@
-name: auto-merge
+name: merge
 on: pull_request
 permissions:
   contents: write
   pull-requests: write
 jobs:
-  dependabot:
+  merge:
     runs-on: ubuntu-latest
     if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
       - id: metadata
-        uses: dependabot/fetch-metadata@v1.1.1
+        uses: dependabot/fetch-metadata@v1.2.1
         with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
-      - name: Automatically merge Node.js minor dependency updates
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Automatically merge minor dependency updates
         if: ${{ steps.metadata.outputs.update-type == 'version-update:semver-minor' }}
-        run: gh pr merge --auto --merge --squash "$PR_URL"
+        run: gh pr merge --auto --squash "$PR_URL"
         env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           PR_URL: ${{ github.event.pull_request.html_url }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
