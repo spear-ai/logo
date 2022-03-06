@@ -108,6 +108,7 @@
       "unnamedComponents": "arrow-function"
     }],
     "react-hooks/exhaustive-deps": ["off"],
+    "react/require-default-props": ["off"],
     "react/style-prop-object": ["off"],
     "react/jsx-sort-props": ["error"],
     "sort-destructure-keys/sort-destructure-keys": ["error"],

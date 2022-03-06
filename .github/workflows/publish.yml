@@ -1,15 +1,13 @@
-name: commitlint
+name: publish
 on:
-  pull_request:
+  release:
     types:
-      - edited
-      - opened
-      - synchronize
+      - created
 jobs:
-  lint:
-    runs-on: ubuntu-latest
+  publish:
+    runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.4.0
       - uses: actions/setup-node@v2
         with:
           cache: yarn
@@ -17,9 +15,8 @@ jobs:
           registry-url: https://npm.pkg.github.com
         env:
           NODE_AUTH_TOKEN: ${{ secrets.PACKAGES_TOKEN }}
-      - run: yarn install
+      - run: |
+          yarn install
+          yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.PACKAGES_TOKEN }}
-      - uses: JulienKode/pull-request-name-linter-action@v0.5.0
-        with:
-          configuration-path: .commitlintrc.json

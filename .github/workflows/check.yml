@@ -1,9 +1,11 @@
 name: checks
 on:
   pull_request:
-    types: ['opened', 'synchronize']
+    types:
+      - opened
+      - synchronize
   push:
-    branches: 'main'
+    branches: main
 jobs:
   should_skip_check:
     runs-on: ubuntu-latest
@@ -13,7 +15,7 @@ jobs:
       - id: skip
         uses: fkirc/skip-duplicate-actions@master
         with:
-          concurrent_skipping: 'outdated_runs'
+          concurrent_skipping: outdated_runs
           paths_ignore: '["license", "**.md", "**.code-workspace"]'
   check:
     needs: should_skip_check
@@ -23,8 +25,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          cache: 'yarn'
-          node-version-file: '.nvmrc'
+          cache: yarn
+          node-version-file: .node-version
       - run: |
           yarn install
           yarn run check

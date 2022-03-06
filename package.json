@@ -3,7 +3,10 @@
   "version": "1.0.2",
   "description": "Spear AI Logo",
   "license": "MIT",
-  "files": ["assets", "react"],
+  "files": [
+    "assets",
+    "react"
+  ],
   "exports": {
     "./assets/*": "./assets/*",
     "./react": "./react/index.js"
@@ -12,7 +15,9 @@
   "type": "module",
   "typesVersions": {
     "*": {
-      "*": ["*"]
+      "*": [
+        "*"
+      ]
     }
   },
   "scripts": {
@@ -40,12 +45,12 @@
     "@commitlint/config-conventional": "16.2.1",
     "@types/node": "17.0.21",
     "@types/react": "17.0.39",
-    "@typescript-eslint/eslint-plugin": "5.12.1",
-    "@typescript-eslint/parser": "5.12.1",
+    "@typescript-eslint/eslint-plugin": "5.13.0",
+    "@typescript-eslint/parser": "5.13.0",
     "concurrently": "7.0.0",
     "del-cli": "4.0.1",
-    "esbuild": "0.14.23",
-    "eslint": "8.9.0",
+    "esbuild": "0.14.25",
+    "eslint": "8.10.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-airbnb-typescript": "16.1.0",
     "eslint-import-resolver-typescript": "2.5.0",
@@ -57,7 +62,7 @@
     "eslint-plugin-markdown": "2.2.1",
     "eslint-plugin-optimize-regex": "1.2.1",
     "eslint-plugin-promise": "6.0.0",
-    "eslint-plugin-react": "7.28.0",
+    "eslint-plugin-react": "7.29.3",
     "eslint-plugin-react-hooks": "4.3.0",
     "eslint-plugin-react-use-props": "1.0.0",
     "eslint-plugin-sonarjs": "0.12.0",
@@ -66,12 +71,11 @@
     "eslint-plugin-unicorn": "41.0.0",
     "husky": "7.0.4",
     "jest": "27.5.1",
-    "npm-package-json-lint": "5.4.2",
-    "npm-package-json-lint-config-default": "3.0.0",
+    "npm-package-json-lint": "6.0.0",
+    "npm-package-json-lint-config-default": "5.0.0",
     "react": "17.0.2",
-    "release-please": "13.4.12",
     "tslib": "2.3.1",
-    "typescript": "4.5.5"
+    "typescript": "4.6.2"
   },
   "peerDependencies": {
     "react": "^17.0.0"

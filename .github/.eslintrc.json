@@ -1,0 +1,16 @@
+{
+  "rules": {
+    "yml/key-name-casing": ["error", {
+      "SCREAMING_SNAKE_CASE": true,
+      "camelCase": false,
+      "kebab-case": true,
+      "snake_case": true
+    }],
+    "yml/sort-sequence-values": ["error", {
+      "order": {
+        "natural": true
+      },
+      "pathPattern": "^$"
+    }]
+  }
+}
