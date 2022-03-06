@@ -28,6 +28,6 @@ jobs:
           cache: yarn
           node-version-file: .node-version
       - run: |
-        yarn install
-        yarn run check
-        yarn run build
+          yarn install
+          yarn run check
+          yarn run build
