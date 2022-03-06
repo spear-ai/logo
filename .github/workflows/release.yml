@@ -16,7 +16,6 @@ jobs:
         with:
           command: manifest
           monorepo-tags: false
-          token: ${{ secrets.WORKFLOW_TOKEN }}
   git-tag:
     needs: release
     if: ${{ needs.release.outputs.release_created }}
@@ -39,3 +38,21 @@ jobs:
           git push origin v${{ needs.release.outputs.major }}
           git push origin v${{ needs.release.outputs.major }}.${{ needs.release.outputs.minor }}
           git push origin v${{ needs.release.outputs.major }}.${{ needs.release.outputs.minor }}.${{ needs.release.outputs.patch }}
+  publish:
+    needs: release
+    if: ${{ needs.release.outputs.release_created }}
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2.4.0
+      - uses: actions/setup-node@v2
+        with:
+          cache: yarn
+          node-version-file: .node-version
+          registry-url: https://npm.pkg.github.com
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.PACKAGES_TOKEN }}
+      - run: |
+          yarn install
+          yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.PACKAGES_TOKEN }}
