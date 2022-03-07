@@ -1,6 +1,6 @@
 {
   "name": "@spear-ai/logo",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "Spear AI Logo",
   "license": "MIT",
   "author": {
@@ -8,7 +8,9 @@
     "name": "Spear AI",
     "url": "https://spear.ai"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "exports": {
     "./assets/*": "./dist/assets/*",
     "./react": "./dist/react/index.js"
@@ -17,7 +19,9 @@
   "type": "module",
   "typesVersions": {
     "*": {
-      "*": ["dist/*"]
+      "*": [
+        "dist/*"
+      ]
     }
   },
   "scripts": {
