@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.0.1](https://github.com/spear-ai/logo/compare/logo-v2.0.0...logo-v2.0.1) (2022-03-07)
+
+
+### Bug Fixes
+
+* fix publish ([995f6e8](https://github.com/spear-ai/logo/commit/995f6e8bf1f9d7228e94fc8c24466079dcd2ba66))
+
 ## [2.0.0](https://github.com/spear-ai/logo/compare/logo-v1.0.4...logo-v2.0.0) (2022-03-07)
 
 
