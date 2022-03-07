@@ -27,7 +27,10 @@ jobs:
         with:
           cache: yarn
           node-version-file: .node-version
+          registry-url: https://registry.npmjs.org
       - run: |
           yarn install
           yarn run check
           yarn run build
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
