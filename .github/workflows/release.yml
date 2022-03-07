@@ -47,7 +47,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           always-auth: true
-          cache: yarn
           node-version-file: .node-version
           registry-url: https://registry.npmjs.org
           scope: spear-ai
