@@ -52,7 +52,6 @@ jobs:
           registry-url: https://registry.npmjs.org
           scope: spear-ai
       - run: |
-          echo '//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN  }}' > ${{ github.workspace }}/.npmrc
           npm config list
           yarn install
           yarn publish
