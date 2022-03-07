@@ -8,42 +8,36 @@
     "name": "Spear AI",
     "url": "https://spear.ai"
   },
-  "files": [
-    "assets",
-    "react"
-  ],
+  "files": ["dist"],
   "exports": {
-    "./assets/*": "./assets/*",
-    "./react": "./react/index.js"
+    "./assets/*": "./dist/assets/*",
+    "./react": "./dist/react/index.js"
   },
   "repository": "github:spear-ai/logo",
   "type": "module",
   "typesVersions": {
     "*": {
-      "*": [
-        "*"
-      ]
+      "*": ["dist/*"]
     }
   },
   "scripts": {
-    "build": "yarn run clean && yarn run build:code && yarn run build:types",
-    "build:code": "esbuild --outfile=react/index.js --platform=node --target=node14 src/react/index.tsx",
-    "build:types": "tsc --emitDeclarationOnly --declaration --project tsconfig.build.json",
+    "build": "yarn run build:other && yarn run build:react && yarn run build:svg",
+    "build:other": "cpy 'src/**' '!**.svg' '!**.tsx' dist",
+    "build:react": "tsup src/react/**/*.tsx --dts --format=esm,cjs --sourcemap --out-dir=dist/react",
+    "build:svg": "svgo --folder src/assets -o dist/assets",
     "check": "yarn run lint && yarn run typecheck",
     "ci": "act --container-architecture=linux/amd64 --platform=ubuntu-latest=ghcr.io/catthehacker/ubuntu:js-latest",
-    "clean": "del react",
-    "esbuild": "esbuild",
+    "clean": "del dist",
+    "dev": "tsup src/react/**/*.tsx --dts --format=esm,cjs --sourcemap --out-dir=react --watch",
     "lint": "yarn run lint:js && yarn run lint:package",
     "lint:js": "eslint --ext .js,.ts,.tsx --ignore-path .gitignore .",
     "lint:package": "npmPkgJsonLint .",
     "outdated": "yarn outdated",
+    "prebuild": "yarn run clean",
     "typecheck": "tsc --noEmit",
     "update": "yarn run update:js && yarn run update:yarn",
     "update:js": "yarn upgrade-interactive --latest",
-    "update:yarn": "yarn policies set-version",
-    "watch": "concurrently 'yarn:watch:code' 'yarn:watch:types'",
-    "watch:code": "yarn run build:code --watch",
-    "watch:types": "yarn run build:types --watch"
+    "update:yarn": "yarn policies set-version"
   },
   "devDependencies": {
     "@commitlint/cli": "16.2.1",
@@ -53,8 +47,8 @@
     "@typescript-eslint/eslint-plugin": "5.13.0",
     "@typescript-eslint/parser": "5.13.0",
     "concurrently": "7.0.0",
+    "cpy-cli": "4.0.0",
     "del-cli": "4.0.1",
-    "esbuild": "0.14.25",
     "eslint": "8.10.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-airbnb-typescript": "16.1.0",
@@ -79,7 +73,9 @@
     "npm-package-json-lint": "6.0.0",
     "npm-package-json-lint-config-default": "5.0.0",
     "react": "17.0.2",
+    "svgo": "2.8.0",
     "tslib": "2.3.1",
+    "tsup": "5.11.13",
     "typescript": "4.6.2"
   },
   "peerDependencies": {
