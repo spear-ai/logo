@@ -54,6 +54,6 @@ jobs:
           echo '//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN  }}' > ${{ github.workspace }}/.npmrc
           cat .npmrc
           yarn install
-          npm publish --@spear-ai:registry=https://registry.npmjs.com --access=public
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
