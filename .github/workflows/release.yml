@@ -53,6 +53,6 @@ jobs:
       - run: |
           cat $NPM_CONFIG_USERCONFIG
           yarn install
-          yarn publish --access=public
+          npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
