@@ -49,7 +49,7 @@ jobs:
           cache: yarn
           node-version-file: .node-version
           registry-url: https://registry.npmjs.org
-          scope: '@spear-ai'
+          scope: spear-ai
       - run: |
           echo '//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN  }}' > ${{ github.workspace }}/.npmrc
           cat .npmrc

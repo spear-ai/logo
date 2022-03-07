@@ -28,6 +28,7 @@ jobs:
           cache: yarn
           node-version-file: .node-version
           registry-url: https://registry.npmjs.org
+          scope: spear-ai
       - run: |
           yarn install
           yarn run check
