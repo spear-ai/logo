@@ -49,8 +49,9 @@ jobs:
           cache: yarn
           node-version-file: .node-version
           registry-url: https://registry.npmjs.org
-          scope: spear-ai
+          scope: @spear-ai
       - run: |
+          cat .npmrc
           yarn install
           yarn publish --access=public
         env:

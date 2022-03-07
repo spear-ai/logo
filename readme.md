@@ -1,7 +1,6 @@
 <div align="center">
   <p>
-    <img alt="Logo (Light)" src="https://raw.githubusercontent.com/spear-ai/logo/main/assets/logo.svg#gh-light-mode-only" width="192">
-    <img alt="Logo (Dark)" src="https://raw.githubusercontent.com/spear-ai/logo/main/assets/logo-dark.svg#gh-dark-mode-only" width="192">
+    <img alt="Logo" src="https://raw.githubusercontent.com/spear-ai/logo/main/src/assets/logo.svg" width="192">
   </p>
   <p>
     <b>Spear AI Logo</b>

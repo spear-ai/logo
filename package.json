@@ -15,7 +15,10 @@
     "./assets/*": "./dist/assets/*",
     "./react": "./dist/react/index.js"
   },
-  "repository": "github:spear-ai/logo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spear-ai/logo.git"
+  },
   "type": "module",
   "typesVersions": {
     "*": {
