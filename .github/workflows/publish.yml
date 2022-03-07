@@ -1,0 +1,22 @@
+name: publish
+on:
+  push:
+    branches: main
+jobs:
+  publish:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2.4.0
+      - uses: actions/setup-node@v2
+        with:
+          cache: yarn
+          node-version-file: .node-version
+          registry-url: https://registry.npmjs.org
+          scope: '@spear-ai'
+      - run: |
+          echo '//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN  }}' > ${{ github.workspace }}/.npmrc
+          cat .npmrc
+          yarn install
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
