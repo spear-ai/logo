@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/spear-ai/logo/compare/logo-v1.0.4...logo-v2.0.0) (2022-03-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* add dark mode logo and favicon
+
+### Features
+
+* add dark mode logo and favicon ([48c5c14](https://github.com/spear-ai/logo/commit/48c5c144c1b601524cc0c3ec09394ec4e07efa71))
+
 ### [1.0.4](https://github.com/spear-ai/logo/compare/logo-v1.0.3...logo-v1.0.4) (2022-03-06)
 
 
