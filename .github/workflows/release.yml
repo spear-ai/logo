@@ -51,8 +51,7 @@ jobs:
           registry-url: https://registry.npmjs.org
           scope: '@spear-ai'
       - run: |
-          cat $NPM_CONFIG_USERCONFIG
           yarn install
-          npm publish --access=public
+          npm publish --@spear-ai:registry=https://registry.npmjs.com --access=public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
