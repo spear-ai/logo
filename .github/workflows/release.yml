@@ -53,7 +53,6 @@ jobs:
           scope: spear-ai
       - run: |
           npm config list
-          npm whoami
           yarn install
           npm publish --access public
         env:
