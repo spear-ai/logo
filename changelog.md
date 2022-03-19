@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.0.23](https://github.com/spear-ai/logo/compare/logo-v2.0.22...logo-v2.0.23) (2022-03-19)
+
+
+### Bug Fixes
+
+* fix cjs exports ([a77076c](https://github.com/spear-ai/logo/commit/a77076c43f8c290a4fa5fd485ca8015198e4bfd5))
+
 ### [2.0.22](https://github.com/spear-ai/logo/compare/logo-v2.0.21...logo-v2.0.22) (2022-03-18)
 
 
