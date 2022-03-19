@@ -9,12 +9,18 @@
     "url": "https://spear.ai"
   },
   "files": [
-    "dist"
+    "assets",
+    "react"
   ],
   "exports": {
-    "./assets/*": "./dist/assets/*",
-    "./react": "./dist/react/index.js"
+    "./assets/*": "./assets/*",
+    "./react": "./react/index.js"
   },
+  "keywords": [
+    "Spear AI",
+    "favicon",
+    "logo"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/spear-ai/logo.git"
@@ -23,18 +29,18 @@
   "typesVersions": {
     "*": {
       "*": [
-        "dist/*"
+        "*"
       ]
     }
   },
   "scripts": {
     "build": "yarn run build:other && yarn run build:react && yarn run build:svg",
-    "build:other": "cpy 'src/**' '!**.svg' '!**.tsx' dist",
-    "build:react": "tsup src/react/**/*.tsx --dts --format=esm,cjs --sourcemap --out-dir=dist/react",
-    "build:svg": "svgo --folder src/assets -o dist/assets",
+    "build:other": "cpy 'src/**' '!**.svg' '!**.tsx' .",
+    "build:react": "tsup src/react/**/*.tsx --dts --format=esm,cjs --sourcemap --out-dir=react",
+    "build:svg": "svgo --folder src/assets -o assets",
     "check": "yarn run lint && yarn run typecheck",
     "ci": "act --container-architecture=linux/amd64 --platform=ubuntu-latest=ghcr.io/catthehacker/ubuntu:js-latest",
-    "clean": "del dist",
+    "clean": "del assets react",
     "dev": "tsup src/react/**/*.tsx --dts --format=esm,cjs --sourcemap --out-dir=react --watch",
     "lint": "yarn run lint:js && yarn run lint:package",
     "lint:js": "eslint --ext .js,.ts,.tsx --ignore-path .gitignore .",
