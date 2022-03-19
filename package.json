@@ -2,6 +2,11 @@
   "name": "@spear-ai/logo",
   "version": "2.0.22",
   "description": "Spear AI Logo",
+  "keywords": [
+    "Spear AI",
+    "favicon",
+    "logo"
+  ],
   "license": "MIT",
   "author": {
     "email": "org@spear.ai",
@@ -16,11 +21,6 @@
     "./assets/*": "./assets/*",
     "./react": "./react/index.js"
   },
-  "keywords": [
-    "Spear AI",
-    "favicon",
-    "logo"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/spear-ai/logo.git"
