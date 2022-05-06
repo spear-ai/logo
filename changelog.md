@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.0.25](https://github.com/spear-ai/logo/compare/logo-v2.0.24...logo-v2.0.25) (2022-05-06)
+
+
+### Bug Fixes
+
+* publish to both NPM and GitHub Packages ([#91](https://github.com/spear-ai/logo/issues/91)) ([c51c258](https://github.com/spear-ai/logo/commit/c51c258054b86e6c2cf35679bf202fded405cd2a))
+
 ### [2.0.24](https://github.com/spear-ai/logo/compare/logo-v2.0.23...logo-v2.0.24) (2022-05-05)
 
 
