@@ -48,10 +48,21 @@ jobs:
         with:
           always-auth: true
           node-version-file: .node-version
+          registry-url: https://npm.pkg.github.com
+      - run: |
+          yarn install
+          yarn run build
+          yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - uses: actions/setup-node@v3
+        with:
+          always-auth: true
+          node-version-file: .node-version
           registry-url: https://registry.npmjs.org
       - run: |
           yarn install
           yarn run build
-          npm publish
+          yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
