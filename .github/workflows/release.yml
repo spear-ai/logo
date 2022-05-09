@@ -38,23 +38,12 @@ jobs:
           git push origin v${{ needs.release.outputs.major }}
           git push origin v${{ needs.release.outputs.major }}.${{ needs.release.outputs.minor }}
           git push origin v${{ needs.release.outputs.major }}.${{ needs.release.outputs.minor }}.${{ needs.release.outputs.patch }}
-  publish:
+  publish-to-npm:
     needs: release
     if: ${{ needs.release.outputs.release_created }}
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version-file: .node-version
-          registry-url: https://npm.pkg.github.com
-          scope: @spear-ai
-      - run: |
-          yarn install
-          yarn run build
-          yarn publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-node@v3
         with:
           always-auth: true
@@ -63,6 +52,25 @@ jobs:
       - run: |
           yarn install
           yarn run build
-          yarn publish
+          yarn publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+  publish-to-gpr:
+    needs: release
+    if: ${{ needs.release.outputs.release_created }}
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          always-auth: true
+          node-version-file: .node-version
+          registry-url: https://npm.pkg.github.com
+          scope: '@spear-ai'
+      - run: |
+          yarn install
+          yarn run build
+          echo "registry=https://npm.pkg.github.com/@spear-ai" >> .npmrc
+          yarn publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
