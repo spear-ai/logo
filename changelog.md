@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.0.27](https://github.com/spear-ai/logo/compare/logo-v2.0.26...logo-v2.0.27) (2022-05-09)
+
+
+### Bug Fixes
+
+* fix gpr ([#96](https://github.com/spear-ai/logo/issues/96)) ([5bf4682](https://github.com/spear-ai/logo/commit/5bf46821c86a69995c945eaf295caed48f0feeca))
+
 ### [2.0.26](https://github.com/spear-ai/logo/compare/logo-v2.0.25...logo-v2.0.26) (2022-05-06)
 
 
