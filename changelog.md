@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/spear-ai/logo/compare/logo-v2.0.27...logo-v2.1.0) (2022-05-16)
+
+
+### Features
+
+* add logo text! ([#98](https://github.com/spear-ai/logo/issues/98)) ([521f069](https://github.com/spear-ai/logo/commit/521f069bffc3f8c4294d0a4e78912c84208fefde))
+
 ### [2.0.27](https://github.com/spear-ai/logo/compare/logo-v2.0.26...logo-v2.0.27) (2022-05-09)
 
 
