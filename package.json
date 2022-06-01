@@ -63,7 +63,7 @@
     "concurrently": "7.1.0",
     "cpy-cli": "4.1.0",
     "del-cli": "4.0.1",
-    "eslint": "8.14.0",
+    "eslint": "8.16.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-airbnb-typescript": "17.0.0",
     "eslint-import-resolver-typescript": "2.7.1",
