@@ -9,9 +9,20 @@ jobs:
     if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
       - id: metadata
-        uses: dependabot/fetch-metadata@v1.3.0
+        uses: dependabot/fetch-metadata@v1.3.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v3
+      - name: Automatically approve
+        run: |
+          gh pr checkout "$PR_URL" # sets the upstream metadata for `gh pr status`
+          if [ "$(gh pr status --json reviewDecision -q .currentBranch.reviewDecision)" != "APPROVED" ];
+          then gh pr review --approve "$PR_URL"
+          else echo "PR already approved, skipping additional approvals to minimize emails/notification noise.";
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
       - name: Automatically merge minor dependency updates
         if: ${{ steps.metadata.outputs.update-type == 'version-update:semver-minor' }}
         run: gh pr merge --auto --squash "$PR_URL"
