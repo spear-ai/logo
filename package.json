@@ -54,7 +54,7 @@
     "update:yarn": "yarn policies set-version"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.0.2",
+    "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.0.2",
     "@types/node": "18.0.0",
     "@types/react": "18.0.13",
