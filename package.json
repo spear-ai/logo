@@ -57,7 +57,7 @@
     "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.0.2",
     "@types/node": "18.0.0",
-    "@types/react": "18.0.13",
+    "@types/react": "18.0.28",
     "@typescript-eslint/eslint-plugin": "5.32.0",
     "@typescript-eslint/parser": "5.28.0",
     "concurrently": "7.2.2",
