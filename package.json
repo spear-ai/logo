@@ -35,6 +35,7 @@
   },
   "scripts": {
     "build": "yarn run build:assets && yarn run build:react",
+    "build:svg": "node ./src/react/path-builder.js",
     "build:assets": "yarn run build:assets:other && yarn run build:assets:svg",
     "build:assets:other": "cpy --flat 'src/assets' '!**.svg' '!**.tsx' assets",
     "build:assets:svg": "svgo --folder src/assets -o assets",
