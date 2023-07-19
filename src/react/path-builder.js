@@ -36,12 +36,12 @@ Z"
       fill="#2f6fb6"
     />
   </defs>
-  <use href="#logo_arc" xlink:href="#logo_arc"/>
-  <use href="#logo_arc" xlink:href="#logo_arc"
+  <use href="#logo_arc" />
+  <use href="#logo_arc" 
     transform="translate(${(3.5 + n) * x},${-1.5 * x * Math.sqrt(3)})
     rotate(-120,${3 * x},${h})"
   />
-  <use href="#logo_arc" xlink:href="#logo_arc"
+  <use href="#logo_arc" 
     transform="translate(${((n - 1) / 2) * x},${-h + 1.5 * Math.sqrt(3) * x})
     rotate(120,${3 * x},${h})"
   />

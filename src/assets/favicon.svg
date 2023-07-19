@@ -10,8 +10,8 @@
         <path id="logo_arc" d="M150 490.603h50L125 360.7l83.25-144.194h-50L75 360.7z"
             fill="#2f6fb6" />
     </defs>
-    <use href="#logo_arc" xlink:href="#logo_arc" />
-    <use href="#logo_arc" xlink:href="#logo_arc" transform="rotate(-120 283.25 327.069)" />
-    <use href="#logo_arc" xlink:href="#logo_arc" transform="rotate(120 283.25 327.069)" />
+    <use href="#logo_arc"  />
+    <use href="#logo_arc"  transform="rotate(-120 283.25 327.069)" />
+    <use href="#logo_arc"  transform="rotate(120 283.25 327.069)" />
     <path class="a" fill="#000031" d="M200 404.001h166.5l25-43.301-83.25-144.194h-50L175 360.7z" />
 </svg>

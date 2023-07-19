@@ -25,12 +25,12 @@ Z"
       fill="#2f6fb6"
     />
   </defs>
-  <use href="#logo_arc" xlink:href="#logo_arc"/>
-  <use href="#logo_arc" xlink:href="#logo_arc"
+  <use href="#logo_arc" />
+  <use href="#logo_arc" 
     transform="translate(341.5,-129.9038105676658)
     rotate(-120,150,490.60339124388446)"
   />
-  <use href="#logo_arc" xlink:href="#logo_arc"
+  <use href="#logo_arc" 
     transform="translate(58.25,-360.69958067621866)
     rotate(120,150,490.60339124388446)"
   />
