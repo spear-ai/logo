@@ -35,11 +35,11 @@
   },
   "scripts": {
     "build": "yarn run build:assets && yarn run build:react",
-    "build:svg": "node ./src/react/path-builder.js",
     "build:assets": "yarn run build:assets:other && yarn run build:assets:svg",
     "build:assets:other": "cpy --flat 'src/assets' '!**.svg' '!**.tsx' assets",
     "build:assets:svg": "svgo --folder src/assets -o assets",
     "build:react": "tsup src/react/index.ts --dts --format=esm,cjs --sourcemap --out-dir=react",
+    "build:svg": "node ./src/react/path-builder.js",
     "check": "yarn run lint && yarn run typecheck",
     "ci": "act --container-architecture=linux/amd64 --platform=ubuntu-latest=ghcr.io/catthehacker/ubuntu:js-latest",
     "clean": "del assets react",
