@@ -1,7 +1,7 @@
 <svg viewBox="75 129.904 416.5 360.7" xmlns="http://www.w3.org/2000/svg">
     <defs>
         <path id="logo_arc" d="M150 490.603h50L125 360.7l83.25-144.194h-50L75 360.7z"
-            fill="#2f6fb6" />
+            fill="#3070b8" />
     </defs>
     <use href="#logo_arc"  />
     <use href="#logo_arc"  transform="rotate(-120 283.25 327.069)" />
