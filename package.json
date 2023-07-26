@@ -35,7 +35,7 @@
   },
   "scripts": {
     "build": "yarn run build:assets && yarn run build:react",
-    "build:assets": "yarn run build:src && yarn run build:assets:other && yarn run build:assets:svg",
+    "build:assets": "yarn run build:assets:other && yarn run build:assets:svg",
     "build:assets:other": "cpy --flat 'src/assets' '!**.svg' '!**.tsx' assets",
     "build:assets:svg": "svgo --folder src/assets -o assets",
     "build:react": "tsup src/react/index.ts --dts --format=esm,cjs --sourcemap --out-dir=react",
