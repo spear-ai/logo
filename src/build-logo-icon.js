@@ -57,6 +57,5 @@ Z"
   />
 </svg>`;
 
-// Write the svg to file
 await fs.writeFile('src/assets/logo-icon.svg', svg);
 await fs.writeFile('src/assets/favicon.svg', svg);
