@@ -28,6 +28,7 @@
       "typescriptreact"
     ],
     "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true
+    "files.trimFinalNewlines": true,
+    "svg.preview.background": "dark-transparent"
   }
 }
