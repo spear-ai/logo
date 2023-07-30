@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/spear-ai/logo/compare/logo-v2.1.0...logo-v2.1.1) (2023-07-30)
+
+
+### Bug Fixes
+
+* **logo:** fix logo shape ([#169](https://github.com/spear-ai/logo/issues/169)) ([4d86e2b](https://github.com/spear-ai/logo/commit/4d86e2b9a708108b15fb5b8375ebfa714a13d06b))
+
 ## [2.1.0](https://github.com/spear-ai/logo/compare/logo-v2.0.27...logo-v2.1.0) (2022-05-16)
 
 
