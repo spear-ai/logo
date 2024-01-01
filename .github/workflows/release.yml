@@ -21,7 +21,7 @@ jobs:
     if: ${{ needs.release.outputs.release_created }}
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
@@ -43,7 +43,7 @@ jobs:
     if: ${{ needs.release.outputs.release_created }}
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           always-auth: true
@@ -60,7 +60,7 @@ jobs:
     if: ${{ needs.release.outputs.release_created }}
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           always-auth: true
