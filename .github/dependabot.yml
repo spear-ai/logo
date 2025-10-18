@@ -3,14 +3,12 @@ updates:
   - package-ecosystem: github-actions
     directory: /
     labels:
-      - 🚀 update
-      - 🌋 technical debt
+      - Maintenance
     schedule:
       interval: monthly
   - package-ecosystem: npm
     directory: /
     labels:
-      - 🚀 update
-      - 🌋 technical debt
+      - Maintenance
     schedule:
       interval: monthly
