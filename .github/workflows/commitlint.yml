@@ -15,6 +15,6 @@ jobs:
           cache: yarn
           node-version-file: .node-version
       - run: yarn install
-      - uses: JulienKode/pull-request-name-linter-action@v0.5.0
+      - uses: JulienKode/pull-request-name-linter-action@v20.1.0
         with:
           configuration-path: .commitlintrc.json
